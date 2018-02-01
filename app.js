@@ -1,22 +1,23 @@
 //variables 
 
 const resetbutton = document.querySelector('#reset');
-const box = document.querySelector('.box');
+const boxes = document.querySelectorAll('.box');
 
 // eventListeners 
 
+boxes.forEach(function(box, index, boxes){
+    box.addEventListener('click', toggleRed);
+})
 
+resetbutton.addEventListener('click', clearGrid);
 
+console.log(boxes);
 //Functions 
-
-box.addEventListener('click', toggleRed);
 
 function toggleRed(e){
     const element = e.target;
     element.classList.toggle('red');
 }
-
-resetbutton.addEventListener('click', clearGrid);
 
 function clearGrid(e){
 
