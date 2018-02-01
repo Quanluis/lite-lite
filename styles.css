@@ -1,4 +1,12 @@
 .lite {
     font-size: 5rem;
     text-align: center;
+    color: lightblue;
+}
+.box {
+    height: 50px; 
+    width: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    
 }
