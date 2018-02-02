@@ -3,6 +3,7 @@ const resetbutton = document.querySelector('#reset');
 const gridSizeForm = document.querySelector('#grid-size');
 const main = document.querySelector('main');
 
+
 // eventListeners 
 
 resetbutton.addEventListener('click', clearGrid);
@@ -18,6 +19,7 @@ function toggleRed(e){
     const element = e.target;
     element.classList.toggle('red');
 }
+
 
 function clearGrid(e){
     const boxes = document.querySelectorAll('.box');
