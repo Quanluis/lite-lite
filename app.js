@@ -2,6 +2,7 @@
 const resetbutton = document.querySelector('#reset');
 const gridSizeForm = document.querySelector('#grid-size');
 const main = document.querySelector('main');
+const colorPicker = document.querySelector('#colorPicker');
 
 
 // eventListeners 
@@ -15,10 +16,21 @@ changeGrid();
 
 //Functions 
 
-function toggleRed(e){
+function color(e){
+    const element = e.target;
+    console.log(element);
+    if(element.style.backgroundColor){
+        element.style.backgroundColor = '';
+        
+    } else {
+        element.style.backgroundColor = colorPicker.value;
+    }
+}
+
+/*function toggleRed(e){
     const element = e.target;
     element.classList.toggle('red');
-}
+}*/
 
 
 function clearGrid(e){
@@ -68,7 +80,7 @@ function makeGrid(size){
             const box = document.createElement('div'); 
             box.classList.add('box');
             column.appendChild(box);
-            box.addEventListener('click', toggleRed);
+            box.addEventListener('click', color);
         }
         rows.push(row);
     }
