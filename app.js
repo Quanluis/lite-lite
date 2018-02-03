@@ -27,10 +27,10 @@ function color(e){
     }
 }
 
-/*function toggleRed(e){
+function toggleRed(e){
     const element = e.target;
     element.classList.toggle('red');
-}*/
+}
 
 
 function clearGrid(e){
